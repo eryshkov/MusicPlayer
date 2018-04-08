@@ -13,11 +13,6 @@
 		5CBCBFA22079F66200ED5395 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CBCBFA12079F66200ED5395 /* Assets.xcassets */; };
 		5CBCBFA52079F66200ED5395 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CBCBFA32079F66200ED5395 /* LaunchScreen.storyboard */; };
 		5CBCBFAD2079F8D900ED5395 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5CBCBFAC2079F8D900ED5395 /* .gitignore */; };
-		5CBCBFAF2079FFDA00ED5395 /* 13 Mrs. Robota.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CBCBFAE2079FFDA00ED5395 /* 13 Mrs. Robota.mp3 */; };
-		5CBCBFB1207A000D00ED5395 /* 2-10 Last Exit to Brooklyn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CBCBFB0207A000D00ED5395 /* 2-10 Last Exit to Brooklyn.mp3 */; };
-		5CBCBFB3207A002F00ED5395 /* 08 Мама – Америка.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CBCBFB2207A002F00ED5395 /* 08 Мама – Америка.mp3 */; };
-		5CBCBFB5207A007300ED5395 /* 11 А знаешь, всё ещё будет.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CBCBFB4207A007300ED5395 /* 11 А знаешь, всё ещё будет.mp3 */; };
-		5CBCBFB7207A008600ED5395 /* 11 Дельтаплан.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CBCBFB6207A008500ED5395 /* 11 Дельтаплан.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,11 +24,6 @@
 		5CBCBFA42079F66200ED5395 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5CBCBFA62079F66200ED5395 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CBCBFAC2079F8D900ED5395 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		5CBCBFAE2079FFDA00ED5395 /* 13 Mrs. Robota.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "13 Mrs. Robota.mp3"; sourceTree = "<group>"; };
-		5CBCBFB0207A000D00ED5395 /* 2-10 Last Exit to Brooklyn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "2-10 Last Exit to Brooklyn.mp3"; sourceTree = "<group>"; };
-		5CBCBFB2207A002F00ED5395 /* 08 Мама – Америка.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "08 Мама – Америка.mp3"; sourceTree = "<group>"; };
-		5CBCBFB4207A007300ED5395 /* 11 А знаешь, всё ещё будет.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "11 А знаешь, всё ещё будет.mp3"; sourceTree = "<group>"; };
-		5CBCBFB6207A008500ED5395 /* 11 Дельтаплан.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "11 Дельтаплан.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,11 +40,6 @@
 		5CBCBF8E2079F65F00ED5395 = {
 			isa = PBXGroup;
 			children = (
-				5CBCBFAE2079FFDA00ED5395 /* 13 Mrs. Robota.mp3 */,
-				5CBCBFB2207A002F00ED5395 /* 08 Мама – Америка.mp3 */,
-				5CBCBFB6207A008500ED5395 /* 11 Дельтаплан.mp3 */,
-				5CBCBFB4207A007300ED5395 /* 11 А знаешь, всё ещё будет.mp3 */,
-				5CBCBFB0207A000D00ED5395 /* 2-10 Last Exit to Brooklyn.mp3 */,
 				5CBCBFAC2079F8D900ED5395 /* .gitignore */,
 				5CBCBF992079F65F00ED5395 /* MusicPlayer */,
 				5CBCBF982079F65F00ED5395 /* Products */,
@@ -141,15 +126,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CBCBFB7207A008600ED5395 /* 11 Дельтаплан.mp3 in Resources */,
 				5CBCBFAD2079F8D900ED5395 /* .gitignore in Resources */,
 				5CBCBFA52079F66200ED5395 /* LaunchScreen.storyboard in Resources */,
 				5CBCBFA22079F66200ED5395 /* Assets.xcassets in Resources */,
-				5CBCBFB1207A000D00ED5395 /* 2-10 Last Exit to Brooklyn.mp3 in Resources */,
 				5CBCBFA02079F65F00ED5395 /* Main.storyboard in Resources */,
-				5CBCBFAF2079FFDA00ED5395 /* 13 Mrs. Robota.mp3 in Resources */,
-				5CBCBFB5207A007300ED5395 /* 11 А знаешь, всё ещё будет.mp3 in Resources */,
-				5CBCBFB3207A002F00ED5395 /* 08 Мама – Америка.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

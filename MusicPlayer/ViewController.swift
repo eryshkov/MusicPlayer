@@ -11,8 +11,23 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
+    //MARK: - Properties
     var volumeSlider: UISlider = {
-        
+        let newSlider = UISlider()
+        newSlider.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi / 2))
+        newSlider.translatesAutoresizingMaskIntoConstraints = false
+        newSlider.minimumValue = 0
+        newSlider.maximumValue = 1
+        newSlider.value = 0.5
+        newSlider.addTarget(self, action: #selector(volumeChanged(_:)), for: .valueChanged)
+        return newSlider
+    }()
+    
+    var volumeSliderView: UIView = {
+        let newView = UIView(frame: .zero)
+        newView.backgroundColor = UIColor.clear
+        newView.translatesAutoresizingMaskIntoConstraints = false
+        return newView
     }()
     
     @IBOutlet weak var progressSlider: UISlider!
@@ -21,9 +36,43 @@ class ViewController: UIViewController {
     
     var timerProgress = Timer()
     
+    //MARK: - View controller methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        readFile()
+        layoutSetup()
+        
+    }
+    
+    deinit {
+        timerProgress.invalidate()
+    }
+    
+    //MARK: - Layout Setup
+    func layoutSetup(){
+        volumeSliderView.addSubview(volumeSlider)
+        view.addSubview(volumeSliderView)
+        
+        var constraints = [NSLayoutConstraint]()
+        
+        // volumeSliderView Setup
+        constraints.append(volumeSliderView.bottomAnchor.constraint(equalTo: progressSlider.topAnchor, constant: -20))
+        constraints.append(volumeSliderView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -16))
+        constraints.append(volumeSliderView.widthAnchor.constraint(equalTo: volumeSlider.heightAnchor, constant: 0))
+        constraints.append(volumeSliderView.heightAnchor.constraint(equalTo: volumeSlider.widthAnchor, constant: 0))
+        
+        //Volume Slider Setup
+        constraints.append(volumeSlider.centerXAnchor.constraint(equalTo: volumeSliderView.centerXAnchor, constant: 0))
+        constraints.append(volumeSlider.centerYAnchor.constraint(equalTo: volumeSliderView.centerYAnchor, constant: 0))
+        constraints.append(volumeSlider.widthAnchor.constraint(equalTo: progressSlider.widthAnchor, multiplier: 0.4))
+        
+
+        
+        NSLayoutConstraint.activate(constraints)
+    }
+    
+    func readFile(){
         do {
             if let audioPath = Bundle.main.path(forResource: "2-10 Last Exit to Brooklyn", ofType: "mp3"){
                 try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath))
@@ -40,8 +89,9 @@ class ViewController: UIViewController {
         } catch {
             print("Error. File not found")
         }
-        
     }
+    
+    //MARK: - Actions
     @IBAction func progressSliderChanged(_ sender: UISlider) {
         self.player.currentTime = TimeInterval(sender.value)
     }
@@ -59,12 +109,9 @@ class ViewController: UIViewController {
         self.player.currentTime = 0.0
     }
     
-    @IBAction func volumeChanged(_ sender: UISlider) {
+    @objc func volumeChanged(_ sender: UISlider) {
         self.player.volume = sender.value
     }
     
-    deinit {
-        timerProgress.invalidate()
-    }
 }
 
