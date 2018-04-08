@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         newView.translatesAutoresizingMaskIntoConstraints = false
         return newView
     }()
-        
+    
     @IBOutlet weak var artistImage: UIImageView!
     @IBOutlet weak var artistLabel: UILabel!
     @IBOutlet weak var trackLabel: UILabel!
@@ -71,7 +71,7 @@ class ViewController: UIViewController {
         constraints.append(volumeSlider.centerYAnchor.constraint(equalTo: volumeSliderView.centerYAnchor, constant: 0))
         constraints.append(volumeSlider.widthAnchor.constraint(equalTo: progressSlider.widthAnchor, multiplier: 0.4))
         
-
+        
         
         NSLayoutConstraint.activate(constraints)
     }
