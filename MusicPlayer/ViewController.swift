@@ -74,7 +74,7 @@ class ViewController: UIViewController {
     
     func readFile(){
         do {
-            if let audioPath = Bundle.main.path(forResource: "2-10 Last Exit to Brooklyn", ofType: "mp3"){
+            if let audioPath = Bundle.main.path(forResource: "21644085_pop-traveling_by_summerloops_preview", ofType: "mp3"){
                 try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath))
                 progressSlider.minimumValue = 0.0
                 progressSlider.maximumValue = Float(player.duration)
