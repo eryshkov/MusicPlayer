@@ -7,18 +7,35 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
-
+    @IBAction func playButtonTapped(_ sender: UIButton) {
+        self.player.play()
+    }
+    @IBAction func pauseButtonTapped(_ sender: UIButton) {
+        self.player.pause()
+    }
+    @IBAction func stopButtonTapped(_ sender: UIButton) {
+        self.player.stop()
+    }
+    
+    var player = AVAudioPlayer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        do {
+            if let audioPath = Bundle.main.path(forResource: "2-10 Last Exit to Brooklyn", ofType: "mp3"){
+            try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath))
+            }
+        } catch {
+            print("Error. File not found")
+        }
+        
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
 
 }
