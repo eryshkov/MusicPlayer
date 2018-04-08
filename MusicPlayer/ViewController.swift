@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     
     var player = AVAudioPlayer()
     
+    var timerProgress = Timer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,12 +25,15 @@ class ViewController: UIViewController {
                 try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath))
                 progressSlider.minimumValue = 0.0
                 progressSlider.maximumValue = Float(player.duration)
-                print(player.duration)
+                timerProgress = Timer(timeInterval: 0.5, repeats: true, block: { (timer) in
+                    self.progressSlider.value = Float(self.player.currentTime)
+                })
+//                timerProgress.add(to: .current,
+//                                  forMode: .defaultRunLoopMode)
             }
         } catch {
             print("Error. File not found")
         }
-        
         
     }
     @IBAction func progressSliderChanged(_ sender: UISlider) {
