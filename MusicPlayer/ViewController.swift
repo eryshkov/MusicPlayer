@@ -93,8 +93,8 @@ class ViewController: UIViewController {
                         continue
                     }
                     switch key.rawValue {
-                    case "title" : trackLabel.text = value as? String
-                    case "artist": artistLabel.text = value as? String
+                    case "title" : trackLabel.text = "Track: \((value as? String) ?? "")"
+                    case "artist": artistLabel.text = "Artist: \((value as? String) ?? "")"
                     case "artwork" where value is NSData : artistImage.image = UIImage(data: (value as! NSData) as Data)
                     default:
                         continue
