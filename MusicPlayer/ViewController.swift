@@ -11,6 +11,10 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
+    var volumeSlider: UISlider = {
+        
+    }()
+    
     @IBOutlet weak var progressSlider: UISlider!
     
     var player = AVAudioPlayer()
@@ -25,11 +29,13 @@ class ViewController: UIViewController {
                 try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath))
                 progressSlider.minimumValue = 0.0
                 progressSlider.maximumValue = Float(player.duration)
-                timerProgress = Timer(timeInterval: 0.5, repeats: true, block: { (timer) in
-                    self.progressSlider.value = Float(self.player.currentTime)
+                
+                self.player.volume = volumeSlider.value
+                
+                timerProgress = Timer(timeInterval: 0.05, repeats: true, block: { (timer) in
+                    self.progressSlider.setValue(Float(self.player.currentTime), animated: true)
                 })
-//                timerProgress.add(to: .current,
-//                                  forMode: .defaultRunLoopMode)
+                RunLoop.current.add(self.timerProgress, forMode: .defaultRunLoopMode)
             }
         } catch {
             print("Error. File not found")
@@ -43,12 +49,22 @@ class ViewController: UIViewController {
     @IBAction func playButtonTapped(_ sender: UIButton) {
         self.player.play()
     }
+    
     @IBAction func pauseButtonTapped(_ sender: UIButton) {
         self.player.pause()
     }
+    
     @IBAction func stopButtonTapped(_ sender: UIButton) {
         self.player.stop()
+        self.player.currentTime = 0.0
     }
     
+    @IBAction func volumeChanged(_ sender: UISlider) {
+        self.player.volume = sender.value
+    }
+    
+    deinit {
+        timerProgress.invalidate()
+    }
 }
 
