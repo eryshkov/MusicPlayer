@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import MediaPlayer
 
 class ViewController: UIViewController {
     
@@ -29,7 +30,10 @@ class ViewController: UIViewController {
         newView.translatesAutoresizingMaskIntoConstraints = false
         return newView
     }()
-    
+        
+    @IBOutlet weak var artistImage: UIImageView!
+    @IBOutlet weak var artistLabel: UILabel!
+    @IBOutlet weak var trackLabel: UILabel!
     @IBOutlet weak var progressSlider: UISlider!
     
     var player = AVAudioPlayer()
@@ -75,15 +79,36 @@ class ViewController: UIViewController {
     func readFile(){
         do {
             if let audioPath = Bundle.main.path(forResource: "21644085_pop-traveling_by_summerloops_preview", ofType: "mp3"){
-                try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath))
+                let trackURL = URL(fileURLWithPath: audioPath)
+                try player = AVAudioPlayer(contentsOf: trackURL)
                 progressSlider.minimumValue = 0.0
                 progressSlider.maximumValue = Float(player.duration)
                 
+                //Extract metadata from track
+                let playerItem = AVPlayerItem(url: trackURL)
+                let metadataList = playerItem.asset.metadata
+                for item in metadataList {
+                    
+                    guard let key = item.commonKey, let value = item.value else{
+                        continue
+                    }
+                    switch key.rawValue {
+                    case "title" : trackLabel.text = value as? String
+                    case "artist": artistLabel.text = value as? String
+                    case "artwork" where value is NSData : artistImage.image = UIImage(data: (value as! NSData) as Data)
+                    default:
+                        continue
+                    }
+                }
+                
+                
                 self.player.volume = volumeSlider.value
                 
+                //Set Timer for progress bar
                 timerProgress = Timer(timeInterval: 0.05, repeats: true, block: { (timer) in
                     self.progressSlider.setValue(Float(self.player.currentTime), animated: true)
                 })
+                //Set runloop for timer
                 RunLoop.current.add(self.timerProgress, forMode: .defaultRunLoopMode)
             }
         } catch {

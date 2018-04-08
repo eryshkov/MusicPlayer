@@ -50,19 +50,51 @@
                                     <action selector="progressSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="CDv-0z-L0s"/>
                                 </connections>
                             </slider>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="MEt-kY-ike">
+                                <rect key="frame" x="19" y="394" width="337.5" height="52"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGG-ku-OHu">
+                                        <rect key="frame" x="0.0" y="0.0" width="42.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ij5-hC-8gm">
+                                        <rect key="frame" x="0.0" y="31.5" width="41.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AvD-MX-cUp">
+                                <rect key="frame" x="67" y="97" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="0OT-mR-v11"/>
+                                    <constraint firstAttribute="width" constant="240" id="9Px-Cm-HhQ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="UnQ-pY-D8K" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="bottom" multiplier="0.8" id="7mC-zs-dlz"/>
+                            <constraint firstItem="MEt-kY-ike" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.9" id="Ipw-bJ-CaB"/>
+                            <constraint firstItem="P4U-Oj-TTM" firstAttribute="top" secondItem="MEt-kY-ike" secondAttribute="bottom" constant="34" id="LZo-6z-0Om"/>
                             <constraint firstItem="P4U-Oj-TTM" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.9" id="V0s-uQ-7p6"/>
                             <constraint firstItem="P4U-Oj-TTM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b93-jB-cds"/>
+                            <constraint firstItem="AvD-MX-cUp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eTv-35-CPu"/>
+                            <constraint firstItem="MEt-kY-ike" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f8z-nF-fft"/>
                             <constraint firstItem="UnQ-pY-D8K" firstAttribute="top" secondItem="P4U-Oj-TTM" secondAttribute="bottom" constant="23.5" id="fKo-tr-Ze4"/>
                             <constraint firstItem="UnQ-pY-D8K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hq8-Ob-Dql"/>
+                            <constraint firstItem="MEt-kY-ike" firstAttribute="top" secondItem="AvD-MX-cUp" secondAttribute="bottom" constant="57" id="u9h-jX-u83"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="artistImage" destination="AvD-MX-cUp" id="toW-As-uBI"/>
+                        <outlet property="artistLabel" destination="Ij5-hC-8gm" id="lQ2-wd-TON"/>
                         <outlet property="progressSlider" destination="P4U-Oj-TTM" id="c8V-h1-R7t"/>
+                        <outlet property="trackLabel" destination="JGG-ku-OHu" id="wqz-3O-Fcd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
