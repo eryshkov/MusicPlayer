@@ -80,7 +80,12 @@ class ViewController: UIViewController {
         do {
             if let audioPath = Bundle.main.path(forResource: "21644085_pop-traveling_by_summerloops_preview", ofType: "mp3"){
                 let trackURL = URL(fileURLWithPath: audioPath)
+                
+                //Setup player
                 try player = AVAudioPlayer(contentsOf: trackURL)
+                self.player.volume = volumeSlider.value
+                
+                //Setup progress slider
                 progressSlider.minimumValue = 0.0
                 progressSlider.maximumValue = Float(player.duration)
                 
@@ -100,9 +105,6 @@ class ViewController: UIViewController {
                         continue
                     }
                 }
-                
-                
-                self.player.volume = volumeSlider.value
                 
                 //Set Timer for progress bar
                 timerProgress = Timer(timeInterval: 0.05, repeats: true, block: { (timer) in
