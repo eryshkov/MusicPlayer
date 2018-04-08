@@ -10,6 +10,31 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var progressSlider: UISlider!
+    
+    var player = AVAudioPlayer()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        do {
+            if let audioPath = Bundle.main.path(forResource: "2-10 Last Exit to Brooklyn", ofType: "mp3"){
+                try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath))
+                progressSlider.minimumValue = 0.0
+                progressSlider.maximumValue = Float(player.duration)
+                print(player.duration)
+            }
+        } catch {
+            print("Error. File not found")
+        }
+        
+        
+    }
+    @IBAction func progressSliderChanged(_ sender: UISlider) {
+        self.player.currentTime = TimeInterval(sender.value)
+    }
+    
     @IBAction func playButtonTapped(_ sender: UIButton) {
         self.player.play()
     }
@@ -20,23 +45,5 @@ class ViewController: UIViewController {
         self.player.stop()
     }
     
-    var player = AVAudioPlayer()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        do {
-            if let audioPath = Bundle.main.path(forResource: "2-10 Last Exit to Brooklyn", ofType: "mp3"){
-            try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath))
-            }
-        } catch {
-            print("Error. File not found")
-        }
-        
-        
-    }
-
-
-
 }
 
