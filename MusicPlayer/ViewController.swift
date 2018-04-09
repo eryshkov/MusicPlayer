@@ -132,21 +132,29 @@ class ViewController: UIViewController {
                 //Extract metadata from track
                 let playerItem = AVPlayerItem(url: trackURL)
                 let metadataList = playerItem.asset.metadata
+                
+                var title = "Track: -"
+                var artist = "Artist: -"
+                var artwork = UIImage(named: "emptyImage")
+                
                 for item in metadataList {
                     
                     guard let key = item.commonKey, let value = item.value else{
+                        print("No metadata found")
                         continue
                     }
                     switch key.rawValue {
-                    case "title" : trackLabel.text = "Track: \((value as? String) ?? "-")"
-                    case "artist": artistLabel.text = "Artist: \((value as? String) ?? "-")"
-                    case "artwork" where value is NSData : artistImage.image = UIImage(data: (value as! NSData) as Data)
+                    case "title" : title = "Track: \((value as? String) ?? "-")"
+                    case "artist": artist = "Artist: \((value as? String) ?? "-")"
+                    case "artwork" where value is NSData : artwork = UIImage(data: (value as! NSData) as Data)
                     default:
                         continue
                     }
                 }
-                
-            }else{ print("No files found")}
+                trackLabel.text = title
+                artistLabel.text = artist
+                artistImage.image = artwork
+            }else{ print("No files found in bundle")}
         } catch {
             print("Error. File not found")
         }
@@ -196,7 +204,12 @@ extension ViewController: UIPickerViewDelegate{
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         currentTrack = row
-        readFile()
+        if player.isPlaying {
+            readFile()
+            self.player.play()
+        }else{
+            readFile()
+        }
     }
 }
 
