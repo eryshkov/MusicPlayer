@@ -48,7 +48,7 @@
                                 <rect key="frame" x="16.5" y="480" width="341.5" height="31"/>
                                 <connections>
                                     <action selector="progressSliderChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cs5-2t-Beo"/>
-                                    <action selector="progressSliderInUse:" destination="BYZ-38-t0r" eventType="touchDownRepeat" id="fWX-de-371"/>
+                                    <action selector="progressSliderInUse:" destination="BYZ-38-t0r" eventType="valueChanged" id="rlA-Yh-Ps3"/>
                                 </connections>
                             </slider>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="MEt-kY-ike">

@@ -40,7 +40,11 @@ class ViewController: UIViewController {
     
     var timerProgress = Timer()
     
-    var isProgressSliderUnused = true //Trottle Timer if in use
+    var progressSliderUnused: Bool = true {
+        willSet{
+            print("progress bar is \(newValue ? "unused" : "using now")")
+        }
+    } //Trottle Timer if in use
     
     //MARK: - View controller methods
     override func viewDidLoad() {
@@ -110,7 +114,7 @@ class ViewController: UIViewController {
                 
                 //Set Timer for progress bar
                 timerProgress = Timer(timeInterval: 0.05, repeats: true, block: { (timer) in
-                    if self.isProgressSliderUnused {
+                    if self.progressSliderUnused {
                     self.progressSlider.setValue(Float(self.player.currentTime), animated: true)
                     }
                 })
@@ -126,26 +130,27 @@ class ViewController: UIViewController {
     
     
     @IBAction func progressSliderInUse(_ sender: UISlider) {
-        self.isProgressSliderUnused = false
+        self.progressSliderUnused = false
+        
     }
     
     @IBAction func progressSliderChanged(_ sender: UISlider) {
         self.player.currentTime = TimeInterval(sender.value)
-        self.isProgressSliderUnused = true
+        self.progressSliderUnused = true
     }
     
     @IBAction func playButtonTapped(_ sender: UIButton) {
         self.player.play()
-        self.isProgressSliderUnused = true
+        self.progressSliderUnused = true
     }
     
     @IBAction func pauseButtonTapped(_ sender: UIButton) {
         self.player.pause()
-        self.isProgressSliderUnused = true
+        self.progressSliderUnused = true
     }
     
     @IBAction func stopButtonTapped(_ sender: UIButton) {
-        self.isProgressSliderUnused = true
+        self.progressSliderUnused = true
         self.player.stop()
         self.player.currentTime = 0.0
     }
