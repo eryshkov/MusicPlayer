@@ -134,7 +134,7 @@ class ViewController: UIViewController {
                 let metadataList = playerItem.asset.metadata
                 
                 var title = "Track: -"
-                var artist = "Artist: -"
+                var album = "Album: -"
                 var artwork = UIImage(named: "emptyImage")
                 
                 for item in metadataList {
@@ -145,19 +145,41 @@ class ViewController: UIViewController {
                     }
                     switch key.rawValue {
                     case "title" : title = "Track: \((value as? String) ?? "-")"
-                    case "artist": artist = "Artist: \((value as? String) ?? "-")"
+                    case "album": album = "Album: \((value as? String) ?? "-")"
                     case "artwork" where value is NSData : artwork = UIImage(data: (value as! NSData) as Data)
                     default:
                         continue
                     }
                 }
                 trackLabel.text = title
-                artistLabel.text = artist
+                artistLabel.text = album
                 artistImage.image = artwork
+                
+                self.setNowPlayingInfo(title: title, album: album, image: artwork!)
+                
             }else{ print("No files found in bundle")}
         } catch {
             print("Error. File not found")
         }
+    }
+    
+    //For NowPlayingInfo while palaying background
+    func setNowPlayingInfo(title: String, album: String, image: UIImage)
+    {
+        let nowPlayingInfoCenter = MPNowPlayingInfoCenter.default()
+        var nowPlayingInfo = nowPlayingInfoCenter.nowPlayingInfo ?? [String: Any]()
+        
+        let title = title
+        let album = album
+        let artwork = MPMediaItemArtwork(boundsSize: image.size, requestHandler: {  (_) -> UIImage in
+            return image
+        })
+        
+        nowPlayingInfo[MPMediaItemPropertyTitle] = title
+        nowPlayingInfo[MPMediaItemPropertyAlbumTitle] = album
+        nowPlayingInfo[MPMediaItemPropertyArtwork] = artwork
+        
+        nowPlayingInfoCenter.nowPlayingInfo = nowPlayingInfo
     }
     
     //MARK: - Actions
