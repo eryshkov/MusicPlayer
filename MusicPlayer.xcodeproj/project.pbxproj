@@ -13,12 +13,12 @@
 		5CBCBFA22079F66200ED5395 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CBCBFA12079F66200ED5395 /* Assets.xcassets */; };
 		5CBCBFA52079F66200ED5395 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CBCBFA32079F66200ED5395 /* LaunchScreen.storyboard */; };
 		5CBCBFAD2079F8D900ED5395 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5CBCBFAC2079F8D900ED5395 /* .gitignore */; };
-		5CBCBFBE207AB8B300ED5395 /* 21644085_pop-traveling_by_summerloops_preview.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CBCBFB8207AB8B200ED5395 /* 21644085_pop-traveling_by_summerloops_preview.mp3 */; };
-		5CBCBFCC207B8ACE00ED5395 /* 21647871_upbeat-motivational-pop_by_vivamusic_preview.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CBCBFC7207B8ACD00ED5395 /* 21647871_upbeat-motivational-pop_by_vivamusic_preview.mp3 */; };
-		5CBCBFCD207B8ACE00ED5395 /* 21661995_positive_by_reversesound_preview.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CBCBFC8207B8ACD00ED5395 /* 21661995_positive_by_reversesound_preview.mp3 */; };
-		5CBCBFCE207B8ACE00ED5395 /* 21649113_summer-mood_by_targetsounds_preview.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CBCBFC9207B8ACD00ED5395 /* 21649113_summer-mood_by_targetsounds_preview.mp3 */; };
-		5CBCBFCF207B8ACE00ED5395 /* 21661744_tropical-travel_by_bransboynd_preview.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CBCBFCA207B8ACD00ED5395 /* 21661744_tropical-travel_by_bransboynd_preview.mp3 */; };
-		5CBCBFD0207B8ACE00ED5395 /* 21651457_80s-synthwave_by_jaredstevenson_preview.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CBCBFCB207B8ACE00ED5395 /* 21651457_80s-synthwave_by_jaredstevenson_preview.mp3 */; };
+		5CBCBFED207BAAA800ED5395 /* 01 Арлекино.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CBCBFE7207BAAA600ED5395 /* 01 Арлекино.mp3 */; };
+		5CBCBFEE207BAAA800ED5395 /* 01 Бриллианты.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CBCBFE8207BAAA700ED5395 /* 01 Бриллианты.mp3 */; };
+		5CBCBFEF207BAAA800ED5395 /* 01 Бедная Овечка.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CBCBFE9207BAAA700ED5395 /* 01 Бедная Овечка.mp3 */; };
+		5CBCBFF0207BAAA800ED5395 /* 01 Джулия.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CBCBFEA207BAAA700ED5395 /* 01 Джулия.mp3 */; };
+		5CBCBFF1207BAAA800ED5395 /* 01 Дура.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CBCBFEB207BAAA800ED5395 /* 01 Дура.mp3 */; };
+		5CBCBFF2207BAAA800ED5395 /* 01 А у нас во дворе.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CBCBFEC207BAAA800ED5395 /* 01 А у нас во дворе.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,12 +30,12 @@
 		5CBCBFA42079F66200ED5395 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5CBCBFA62079F66200ED5395 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CBCBFAC2079F8D900ED5395 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		5CBCBFB8207AB8B200ED5395 /* 21644085_pop-traveling_by_summerloops_preview.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "21644085_pop-traveling_by_summerloops_preview.mp3"; sourceTree = "<group>"; };
-		5CBCBFC7207B8ACD00ED5395 /* 21647871_upbeat-motivational-pop_by_vivamusic_preview.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "21647871_upbeat-motivational-pop_by_vivamusic_preview.mp3"; sourceTree = "<group>"; };
-		5CBCBFC8207B8ACD00ED5395 /* 21661995_positive_by_reversesound_preview.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 21661995_positive_by_reversesound_preview.mp3; sourceTree = "<group>"; };
-		5CBCBFC9207B8ACD00ED5395 /* 21649113_summer-mood_by_targetsounds_preview.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "21649113_summer-mood_by_targetsounds_preview.mp3"; sourceTree = "<group>"; };
-		5CBCBFCA207B8ACD00ED5395 /* 21661744_tropical-travel_by_bransboynd_preview.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "21661744_tropical-travel_by_bransboynd_preview.mp3"; sourceTree = "<group>"; };
-		5CBCBFCB207B8ACE00ED5395 /* 21651457_80s-synthwave_by_jaredstevenson_preview.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "21651457_80s-synthwave_by_jaredstevenson_preview.mp3"; sourceTree = "<group>"; };
+		5CBCBFE7207BAAA600ED5395 /* 01 Арлекино.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "01 Арлекино.mp3"; sourceTree = "<group>"; };
+		5CBCBFE8207BAAA700ED5395 /* 01 Бриллианты.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "01 Бриллианты.mp3"; sourceTree = "<group>"; };
+		5CBCBFE9207BAAA700ED5395 /* 01 Бедная Овечка.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "01 Бедная Овечка.mp3"; sourceTree = "<group>"; };
+		5CBCBFEA207BAAA700ED5395 /* 01 Джулия.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "01 Джулия.mp3"; sourceTree = "<group>"; };
+		5CBCBFEB207BAAA800ED5395 /* 01 Дура.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "01 Дура.mp3"; sourceTree = "<group>"; };
+		5CBCBFEC207BAAA800ED5395 /* 01 А у нас во дворе.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "01 А у нас во дворе.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,12 +83,12 @@
 		5CBCBFC4207AB8C400ED5395 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
-				5CBCBFC7207B8ACD00ED5395 /* 21647871_upbeat-motivational-pop_by_vivamusic_preview.mp3 */,
-				5CBCBFC9207B8ACD00ED5395 /* 21649113_summer-mood_by_targetsounds_preview.mp3 */,
-				5CBCBFCB207B8ACE00ED5395 /* 21651457_80s-synthwave_by_jaredstevenson_preview.mp3 */,
-				5CBCBFCA207B8ACD00ED5395 /* 21661744_tropical-travel_by_bransboynd_preview.mp3 */,
-				5CBCBFC8207B8ACD00ED5395 /* 21661995_positive_by_reversesound_preview.mp3 */,
-				5CBCBFB8207AB8B200ED5395 /* 21644085_pop-traveling_by_summerloops_preview.mp3 */,
+				5CBCBFEC207BAAA800ED5395 /* 01 А у нас во дворе.mp3 */,
+				5CBCBFE7207BAAA600ED5395 /* 01 Арлекино.mp3 */,
+				5CBCBFE9207BAAA700ED5395 /* 01 Бедная Овечка.mp3 */,
+				5CBCBFE8207BAAA700ED5395 /* 01 Бриллианты.mp3 */,
+				5CBCBFEA207BAAA700ED5395 /* 01 Джулия.mp3 */,
+				5CBCBFEB207BAAA800ED5395 /* 01 Дура.mp3 */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -157,16 +157,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CBCBFD0207B8ACE00ED5395 /* 21651457_80s-synthwave_by_jaredstevenson_preview.mp3 in Resources */,
-				5CBCBFCC207B8ACE00ED5395 /* 21647871_upbeat-motivational-pop_by_vivamusic_preview.mp3 in Resources */,
+				5CBCBFF2207BAAA800ED5395 /* 01 А у нас во дворе.mp3 in Resources */,
+				5CBCBFED207BAAA800ED5395 /* 01 Арлекино.mp3 in Resources */,
+				5CBCBFEE207BAAA800ED5395 /* 01 Бриллианты.mp3 in Resources */,
 				5CBCBFAD2079F8D900ED5395 /* .gitignore in Resources */,
-				5CBCBFCE207B8ACE00ED5395 /* 21649113_summer-mood_by_targetsounds_preview.mp3 in Resources */,
+				5CBCBFF0207BAAA800ED5395 /* 01 Джулия.mp3 in Resources */,
 				5CBCBFA52079F66200ED5395 /* LaunchScreen.storyboard in Resources */,
-				5CBCBFBE207AB8B300ED5395 /* 21644085_pop-traveling_by_summerloops_preview.mp3 in Resources */,
-				5CBCBFCF207B8ACE00ED5395 /* 21661744_tropical-travel_by_bransboynd_preview.mp3 in Resources */,
 				5CBCBFA22079F66200ED5395 /* Assets.xcassets in Resources */,
-				5CBCBFCD207B8ACE00ED5395 /* 21661995_positive_by_reversesound_preview.mp3 in Resources */,
+				5CBCBFF1207BAAA800ED5395 /* 01 Дура.mp3 in Resources */,
 				5CBCBFA02079F65F00ED5395 /* Main.storyboard in Resources */,
+				5CBCBFEF207BAAA800ED5395 /* 01 Бедная Овечка.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

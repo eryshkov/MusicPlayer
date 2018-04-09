@@ -135,6 +135,7 @@ class ViewController: UIViewController {
                 
                 var title = "Track: -"
                 var album = "Album: -"
+                var artist = "Artist: -"
                 var artwork = UIImage(named: "emptyImage")
                 
                 for item in metadataList {
@@ -146,16 +147,20 @@ class ViewController: UIViewController {
                     switch key.rawValue {
                     case "title" : title = "Track: \((value as? String) ?? "-")"
                     case "album": album = "Album: \((value as? String) ?? "-")"
-                    case "artwork" where value is NSData : artwork = UIImage(data: (value as! NSData) as Data)
+                    case "artist": artist = "Artist: \((value as? String) ?? "-")"
+                    case "artwork" where value is NSData :
+                        print("Image found")
+                        artwork = UIImage(data: (value as! NSData) as Data)
                     default:
+                        print(key.rawValue)
                         continue
                     }
                 }
                 trackLabel.text = title
-                artistLabel.text = album
+                artistLabel.text = artist
                 artistImage.image = artwork
                 
-                self.setNowPlayingInfo(title: title, album: album, image: artwork!)
+                self.setNowPlayingInfo(title: title, album: artist, image: artwork!)
                 
             }else{ print("No files found in bundle")}
         } catch {
