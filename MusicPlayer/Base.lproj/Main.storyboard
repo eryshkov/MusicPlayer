@@ -47,7 +47,8 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="P4U-Oj-TTM">
                                 <rect key="frame" x="16.5" y="480" width="341.5" height="31"/>
                                 <connections>
-                                    <action selector="progressSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="CDv-0z-L0s"/>
+                                    <action selector="progressSliderChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cs5-2t-Beo"/>
+                                    <action selector="progressSliderInUse:" destination="BYZ-38-t0r" eventType="touchDownRepeat" id="fWX-de-371"/>
                                 </connections>
                             </slider>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="MEt-kY-ike">

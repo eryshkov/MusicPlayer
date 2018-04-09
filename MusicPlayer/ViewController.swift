@@ -40,6 +40,8 @@ class ViewController: UIViewController {
     
     var timerProgress = Timer()
     
+    var isProgressSliderUnused = false //Trottle Timer if in use
+    
     //MARK: - View controller methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,8 +100,8 @@ class ViewController: UIViewController {
                         continue
                     }
                     switch key.rawValue {
-                    case "title" : trackLabel.text = "Track: \((value as? String) ?? "")"
-                    case "artist": artistLabel.text = "Artist: \((value as? String) ?? "")"
+                    case "title" : trackLabel.text = "Track: \((value as? String) ?? "-")"
+                    case "artist": artistLabel.text = "Artist: \((value as? String) ?? "-")"
                     case "artwork" where value is NSData : artistImage.image = UIImage(data: (value as! NSData) as Data)
                     default:
                         continue
@@ -108,7 +110,9 @@ class ViewController: UIViewController {
                 
                 //Set Timer for progress bar
                 timerProgress = Timer(timeInterval: 0.05, repeats: true, block: { (timer) in
+                    if !self.isProgressSliderUnused {
                     self.progressSlider.setValue(Float(self.player.currentTime), animated: true)
+                    }
                 })
                 //Set runloop for timer
                 RunLoop.current.add(self.timerProgress, forMode: .defaultRunLoopMode)
@@ -119,8 +123,15 @@ class ViewController: UIViewController {
     }
     
     //MARK: - Actions
+    
+    
+    @IBAction func progressSliderInUse(_ sender: UISlider) {
+        self.isProgressSliderUnused = false
+    }
+    
     @IBAction func progressSliderChanged(_ sender: UISlider) {
         self.player.currentTime = TimeInterval(sender.value)
+        self.isProgressSliderUnused = true
     }
     
     @IBAction func playButtonTapped(_ sender: UIButton) {
