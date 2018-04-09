@@ -31,6 +31,7 @@ class ViewController: UIViewController {
         return newView
     }()
     
+    @IBOutlet weak var playListPickerView: UIPickerView!
     @IBOutlet weak var artistImage: UIImageView!
     @IBOutlet weak var artistLabel: UILabel!
     @IBOutlet weak var trackLabel: UILabel!
@@ -49,6 +50,8 @@ class ViewController: UIViewController {
     //MARK: - View controller methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        playListPickerView.delegate = self
         
         readFile()
         layoutSetup()
@@ -160,4 +163,33 @@ class ViewController: UIViewController {
     }
     
 }
+
+extension ViewController: UIPickerViewDelegate{
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return "row \(row)"
+    }
+}
+
+extension ViewController: UIPickerViewDataSource{
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 3
+    }
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
 
