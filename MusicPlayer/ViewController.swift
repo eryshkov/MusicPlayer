@@ -39,7 +39,7 @@ class ViewController: UIViewController {
     
     var player = AVAudioPlayer()
     
-    var currentTrack: String?
+    var currentTrack: Int?
     
     var allTracks = [URL]()
     
@@ -47,7 +47,7 @@ class ViewController: UIViewController {
     
     var progressSliderUnused: Bool = true {
         willSet{
-            print("progress bar is \(newValue ? "unused" : "using now")")
+            //print("progress bar is \(newValue ? "unused" : "using now")")
         }
     } //Trottle Timer if in use
     
@@ -58,9 +58,11 @@ class ViewController: UIViewController {
         getPlayList()
         
         playListPickerView.delegate = self
+        playListPickerView.selectRow(0, inComponent: 0, animated: true)
         
+        currentTrack = 0
         readFile()
-        
+        setTimer()
         layoutSetup()
         
     }
@@ -102,10 +104,22 @@ class ViewController: UIViewController {
         
     }
     
+    fileprivate func setTimer() {
+        //Set Timer for progress bar
+        timerProgress = Timer(timeInterval: 0.05, repeats: true, block: { (timer) in
+            if self.progressSliderUnused {
+                self.progressSlider.setValue(Float(self.player.currentTime), animated: true)
+            }
+        })
+        //Set runloop for timer
+        RunLoop.current.add(self.timerProgress, forMode: .defaultRunLoopMode)
+    }
+    
     func readFile(){
         do {
-            if let audioPath = Bundle.main.path(forResource: (currentTrack ?? ""), ofType: "mp3"){
-                let trackURL = URL(fileURLWithPath: audioPath)
+            if let audioPath = currentTrack{
+                let trackURL = allTracks[audioPath]
+                print(trackURL.lastPathComponent)
                 
                 //Setup player
                 try player = AVAudioPlayer(contentsOf: trackURL)
@@ -132,15 +146,7 @@ class ViewController: UIViewController {
                     }
                 }
                 
-                //Set Timer for progress bar
-                timerProgress = Timer(timeInterval: 0.05, repeats: true, block: { (timer) in
-                    if self.progressSliderUnused {
-                    self.progressSlider.setValue(Float(self.player.currentTime), animated: true)
-                    }
-                })
-                //Set runloop for timer
-                RunLoop.current.add(self.timerProgress, forMode: .defaultRunLoopMode)
-            }
+            }else{ print("No files found")}
         } catch {
             print("Error. File not found")
         }
@@ -186,6 +192,11 @@ extension ViewController: UIPickerViewDelegate{
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
         return allTracks[row].lastPathComponent
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        currentTrack = row
+        readFile()
     }
 }
 

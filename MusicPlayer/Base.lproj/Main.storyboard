@@ -76,7 +76,7 @@
                                 </constraints>
                             </imageView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h2i-X6-YOS">
-                                <rect key="frame" x="18.666666666666657" y="44" width="337.66666666666674" height="142"/>
+                                <rect key="frame" x="19" y="44" width="337" height="142"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="142" id="0Wf-fv-qSk"/>
                                 </constraints>
