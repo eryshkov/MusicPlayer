@@ -39,6 +39,10 @@ class ViewController: UIViewController {
     
     var player = AVAudioPlayer()
     
+    var currentTrack: String?
+    
+    var allTracks = [URL]()
+    
     var timerProgress = Timer()
     
     var progressSliderUnused: Bool = true {
@@ -51,9 +55,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        getPlayList()
+        
         playListPickerView.delegate = self
         
         readFile()
+        
         layoutSetup()
         
     }
@@ -85,9 +92,19 @@ class ViewController: UIViewController {
         NSLayoutConstraint.activate(constraints)
     }
     
+    func getPlayList() {
+        let playList = Bundle.main.paths(forResourcesOfType: "mp3", inDirectory: "")
+        
+        for item in playList {
+            allTracks.append(URL(fileURLWithPath: item))
+        }
+        
+        
+    }
+    
     func readFile(){
         do {
-            if let audioPath = Bundle.main.path(forResource: "21644085_pop-traveling_by_summerloops_preview", ofType: "mp3"){
+            if let audioPath = Bundle.main.path(forResource: (currentTrack ?? ""), ofType: "mp3"){
                 let trackURL = URL(fileURLWithPath: audioPath)
                 
                 //Setup player
@@ -162,11 +179,13 @@ class ViewController: UIViewController {
         self.player.volume = sender.value
     }
     
+    
 }
 
 extension ViewController: UIPickerViewDelegate{
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return "row \(row)"
+        
+        return allTracks[row].lastPathComponent
     }
 }
 
@@ -176,7 +195,7 @@ extension ViewController: UIPickerViewDataSource{
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 3
+        return allTracks.count
     }
     
     
