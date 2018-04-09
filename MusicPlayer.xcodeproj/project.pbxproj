@@ -14,11 +14,11 @@
 		5CBCBFA52079F66200ED5395 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CBCBFA32079F66200ED5395 /* LaunchScreen.storyboard */; };
 		5CBCBFAD2079F8D900ED5395 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5CBCBFAC2079F8D900ED5395 /* .gitignore */; };
 		5CBCBFBE207AB8B300ED5395 /* 21644085_pop-traveling_by_summerloops_preview.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CBCBFB8207AB8B200ED5395 /* 21644085_pop-traveling_by_summerloops_preview.mp3 */; };
-		5CBCBFBF207AB8B300ED5395 /* 21647871_upbeat-motivational-pop_by_vivamusic_preview.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CBCBFB9207AB8B200ED5395 /* 21647871_upbeat-motivational-pop_by_vivamusic_preview.mp3 */; };
-		5CBCBFC0207AB8B300ED5395 /* 21661995_positive_by_reversesound_preview.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CBCBFBA207AB8B200ED5395 /* 21661995_positive_by_reversesound_preview.mp3 */; };
-		5CBCBFC1207AB8B300ED5395 /* 21661744_tropical-travel_by_bransboynd_preview.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CBCBFBB207AB8B300ED5395 /* 21661744_tropical-travel_by_bransboynd_preview.mp3 */; };
-		5CBCBFC2207AB8B300ED5395 /* 21651457_80s-synthwave_by_jaredstevenson_preview.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CBCBFBC207AB8B300ED5395 /* 21651457_80s-synthwave_by_jaredstevenson_preview.mp3 */; };
-		5CBCBFC3207AB8B300ED5395 /* 21649113_summer-mood_by_targetsounds_preview.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CBCBFBD207AB8B300ED5395 /* 21649113_summer-mood_by_targetsounds_preview.mp3 */; };
+		5CBCBFCC207B8ACE00ED5395 /* 21647871_upbeat-motivational-pop_by_vivamusic_preview.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CBCBFC7207B8ACD00ED5395 /* 21647871_upbeat-motivational-pop_by_vivamusic_preview.mp3 */; };
+		5CBCBFCD207B8ACE00ED5395 /* 21661995_positive_by_reversesound_preview.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CBCBFC8207B8ACD00ED5395 /* 21661995_positive_by_reversesound_preview.mp3 */; };
+		5CBCBFCE207B8ACE00ED5395 /* 21649113_summer-mood_by_targetsounds_preview.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CBCBFC9207B8ACD00ED5395 /* 21649113_summer-mood_by_targetsounds_preview.mp3 */; };
+		5CBCBFCF207B8ACE00ED5395 /* 21661744_tropical-travel_by_bransboynd_preview.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CBCBFCA207B8ACD00ED5395 /* 21661744_tropical-travel_by_bransboynd_preview.mp3 */; };
+		5CBCBFD0207B8ACE00ED5395 /* 21651457_80s-synthwave_by_jaredstevenson_preview.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CBCBFCB207B8ACE00ED5395 /* 21651457_80s-synthwave_by_jaredstevenson_preview.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,11 +31,11 @@
 		5CBCBFA62079F66200ED5395 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CBCBFAC2079F8D900ED5395 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		5CBCBFB8207AB8B200ED5395 /* 21644085_pop-traveling_by_summerloops_preview.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "21644085_pop-traveling_by_summerloops_preview.mp3"; sourceTree = "<group>"; };
-		5CBCBFB9207AB8B200ED5395 /* 21647871_upbeat-motivational-pop_by_vivamusic_preview.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "21647871_upbeat-motivational-pop_by_vivamusic_preview.mp3"; sourceTree = "<group>"; };
-		5CBCBFBA207AB8B200ED5395 /* 21661995_positive_by_reversesound_preview.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 21661995_positive_by_reversesound_preview.mp3; sourceTree = "<group>"; };
-		5CBCBFBB207AB8B300ED5395 /* 21661744_tropical-travel_by_bransboynd_preview.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "21661744_tropical-travel_by_bransboynd_preview.mp3"; sourceTree = "<group>"; };
-		5CBCBFBC207AB8B300ED5395 /* 21651457_80s-synthwave_by_jaredstevenson_preview.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "21651457_80s-synthwave_by_jaredstevenson_preview.mp3"; sourceTree = "<group>"; };
-		5CBCBFBD207AB8B300ED5395 /* 21649113_summer-mood_by_targetsounds_preview.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "21649113_summer-mood_by_targetsounds_preview.mp3"; sourceTree = "<group>"; };
+		5CBCBFC7207B8ACD00ED5395 /* 21647871_upbeat-motivational-pop_by_vivamusic_preview.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "21647871_upbeat-motivational-pop_by_vivamusic_preview.mp3"; sourceTree = "<group>"; };
+		5CBCBFC8207B8ACD00ED5395 /* 21661995_positive_by_reversesound_preview.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 21661995_positive_by_reversesound_preview.mp3; sourceTree = "<group>"; };
+		5CBCBFC9207B8ACD00ED5395 /* 21649113_summer-mood_by_targetsounds_preview.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "21649113_summer-mood_by_targetsounds_preview.mp3"; sourceTree = "<group>"; };
+		5CBCBFCA207B8ACD00ED5395 /* 21661744_tropical-travel_by_bransboynd_preview.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "21661744_tropical-travel_by_bransboynd_preview.mp3"; sourceTree = "<group>"; };
+		5CBCBFCB207B8ACE00ED5395 /* 21651457_80s-synthwave_by_jaredstevenson_preview.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "21651457_80s-synthwave_by_jaredstevenson_preview.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,12 +83,12 @@
 		5CBCBFC4207AB8C400ED5395 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				5CBCBFC7207B8ACD00ED5395 /* 21647871_upbeat-motivational-pop_by_vivamusic_preview.mp3 */,
+				5CBCBFC9207B8ACD00ED5395 /* 21649113_summer-mood_by_targetsounds_preview.mp3 */,
+				5CBCBFCB207B8ACE00ED5395 /* 21651457_80s-synthwave_by_jaredstevenson_preview.mp3 */,
+				5CBCBFCA207B8ACD00ED5395 /* 21661744_tropical-travel_by_bransboynd_preview.mp3 */,
+				5CBCBFC8207B8ACD00ED5395 /* 21661995_positive_by_reversesound_preview.mp3 */,
 				5CBCBFB8207AB8B200ED5395 /* 21644085_pop-traveling_by_summerloops_preview.mp3 */,
-				5CBCBFB9207AB8B200ED5395 /* 21647871_upbeat-motivational-pop_by_vivamusic_preview.mp3 */,
-				5CBCBFBD207AB8B300ED5395 /* 21649113_summer-mood_by_targetsounds_preview.mp3 */,
-				5CBCBFBA207AB8B200ED5395 /* 21661995_positive_by_reversesound_preview.mp3 */,
-				5CBCBFBC207AB8B300ED5395 /* 21651457_80s-synthwave_by_jaredstevenson_preview.mp3 */,
-				5CBCBFBB207AB8B300ED5395 /* 21661744_tropical-travel_by_bransboynd_preview.mp3 */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -152,15 +152,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CBCBFBF207AB8B300ED5395 /* 21647871_upbeat-motivational-pop_by_vivamusic_preview.mp3 in Resources */,
+				5CBCBFD0207B8ACE00ED5395 /* 21651457_80s-synthwave_by_jaredstevenson_preview.mp3 in Resources */,
+				5CBCBFCC207B8ACE00ED5395 /* 21647871_upbeat-motivational-pop_by_vivamusic_preview.mp3 in Resources */,
 				5CBCBFAD2079F8D900ED5395 /* .gitignore in Resources */,
+				5CBCBFCE207B8ACE00ED5395 /* 21649113_summer-mood_by_targetsounds_preview.mp3 in Resources */,
 				5CBCBFA52079F66200ED5395 /* LaunchScreen.storyboard in Resources */,
-				5CBCBFC1207AB8B300ED5395 /* 21661744_tropical-travel_by_bransboynd_preview.mp3 in Resources */,
-				5CBCBFC3207AB8B300ED5395 /* 21649113_summer-mood_by_targetsounds_preview.mp3 in Resources */,
 				5CBCBFBE207AB8B300ED5395 /* 21644085_pop-traveling_by_summerloops_preview.mp3 in Resources */,
-				5CBCBFC2207AB8B300ED5395 /* 21651457_80s-synthwave_by_jaredstevenson_preview.mp3 in Resources */,
+				5CBCBFCF207B8ACE00ED5395 /* 21661744_tropical-travel_by_bransboynd_preview.mp3 in Resources */,
 				5CBCBFA22079F66200ED5395 /* Assets.xcassets in Resources */,
-				5CBCBFC0207AB8B300ED5395 /* 21661995_positive_by_reversesound_preview.mp3 in Resources */,
+				5CBCBFCD207B8ACE00ED5395 /* 21661995_positive_by_reversesound_preview.mp3 in Resources */,
 				5CBCBFA02079F65F00ED5395 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
