@@ -126,6 +126,11 @@
 					5CBCBF962079F65F00ED5395 = {
 						CreatedOnToolsVersion = 9.3;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
