@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     
     var timerProgress = Timer()
     
-    var isProgressSliderUnused = false //Trottle Timer if in use
+    var isProgressSliderUnused = true //Trottle Timer if in use
     
     //MARK: - View controller methods
     override func viewDidLoad() {
@@ -110,7 +110,7 @@ class ViewController: UIViewController {
                 
                 //Set Timer for progress bar
                 timerProgress = Timer(timeInterval: 0.05, repeats: true, block: { (timer) in
-                    if !self.isProgressSliderUnused {
+                    if self.isProgressSliderUnused {
                     self.progressSlider.setValue(Float(self.player.currentTime), animated: true)
                     }
                 })
@@ -136,13 +136,16 @@ class ViewController: UIViewController {
     
     @IBAction func playButtonTapped(_ sender: UIButton) {
         self.player.play()
+        self.isProgressSliderUnused = true
     }
     
     @IBAction func pauseButtonTapped(_ sender: UIButton) {
         self.player.pause()
+        self.isProgressSliderUnused = true
     }
     
     @IBAction func stopButtonTapped(_ sender: UIButton) {
+        self.isProgressSliderUnused = true
         self.player.stop()
         self.player.currentTime = 0.0
     }
