@@ -123,6 +123,7 @@ class ViewController: UIViewController {
                 
                 //Setup player
                 try player = AVAudioPlayer(contentsOf: trackURL)
+                player.delegate = self //For observe on finish playing
                 self.player.volume = volumeSlider.value
                 
                 //Setup progress slider
@@ -134,7 +135,7 @@ class ViewController: UIViewController {
                 let metadataList = playerItem.asset.metadata
                 
                 var title = "Track: -"
-                var album = "Album: -"
+                //var album = "Album: -"
                 var artist = "Artist: -"
                 var artwork = UIImage(named: "emptyImage")
                 
@@ -146,7 +147,7 @@ class ViewController: UIViewController {
                     }
                     switch key.rawValue {
                     case "title" : title = "Track: \((value as? String) ?? "-")"
-                    case "album": album = "Album: \((value as? String) ?? "-")"
+                    //case "album": album = "Album: \((value as? String) ?? "-")"
                     case "artist": artist = "Artist: \((value as? String) ?? "-")"
                     case "artwork" where value is NSData :
                         print("Image found")
@@ -252,7 +253,18 @@ extension ViewController: UIPickerViewDataSource{
     
 }
 
-
+extension ViewController: AVAudioPlayerDelegate{
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        if var curTrack = currentTrack{
+            curTrack += 1
+            currentTrack = curTrack >= allTracks.count ? 0 : curTrack
+            playListPickerView.selectRow(currentTrack!, inComponent: 0, animated: true)
+        }
+        
+        readFile()
+        self.player.play()
+    }
+}
 
 
 
