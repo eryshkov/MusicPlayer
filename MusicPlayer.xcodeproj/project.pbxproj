@@ -50,9 +50,10 @@
 		5CBCBF8E2079F65F00ED5395 = {
 			isa = PBXGroup;
 			children = (
+				5CBCC036207FDD7400ED5395 /* Model */,
 				5CBCBFC4207AB8C400ED5395 /* Audio */,
 				5CBCBFAC2079F8D900ED5395 /* .gitignore */,
-				5CBCBF992079F65F00ED5395 /* MusicPlayer */,
+				5CBCBF992079F65F00ED5395 /* Controller */,
 				5CBCBF982079F65F00ED5395 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,7 +66,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5CBCBF992079F65F00ED5395 /* MusicPlayer */ = {
+		5CBCBF992079F65F00ED5395 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				5CBCBF9A2079F65F00ED5395 /* AppDelegate.swift */,
@@ -75,7 +76,7 @@
 				5CBCBFA32079F66200ED5395 /* LaunchScreen.storyboard */,
 				5CBCBFA62079F66200ED5395 /* Info.plist */,
 			);
-			path = MusicPlayer;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		5CBCBFC4207AB8C400ED5395 /* Audio */ = {
@@ -88,6 +89,13 @@
 				5CBCC030207FDC2300ED5395 /* 21684358_happy-pop_by_soundshrim_preview.mp3 */,
 			);
 			path = Audio;
+			sourceTree = "<group>";
+		};
+		5CBCC036207FDD7400ED5395 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,7 +327,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 6H29G2Q5U5;
-				INFOPLIST_FILE = MusicPlayer/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Controller/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eekwq92jkq.i23.MusicPlayer;
@@ -337,7 +345,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 6H29G2Q5U5;
-				INFOPLIST_FILE = MusicPlayer/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Controller/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eekwq92jkq.i23.MusicPlayer;
