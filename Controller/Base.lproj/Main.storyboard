@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="UnQ-pY-D8K">
-                                <rect key="frame" x="35.666666666666657" y="700.33333333333337" width="304" height="30"/>
+                                <rect key="frame" x="35" y="724" width="304" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5EW-ub-sU0">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -45,14 +45,14 @@
                                 </subviews>
                             </stackView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="P4U-Oj-TTM">
-                                <rect key="frame" x="16.666666666666657" y="646.33333333333337" width="341.66666666666674" height="31"/>
+                                <rect key="frame" x="16.666666666666657" y="646.66666666666663" width="341.66666666666674" height="31"/>
                                 <connections>
                                     <action selector="progressSliderChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cs5-2t-Beo"/>
                                     <action selector="progressSliderInUse:" destination="BYZ-38-t0r" eventType="valueChanged" id="rlA-Yh-Ps3"/>
                                 </connections>
                             </slider>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="MEt-kY-ike">
-                                <rect key="frame" x="18.666666666666657" y="560.66666666666663" width="337.66666666666674" height="51.666666666666629"/>
+                                <rect key="frame" x="18.666666666666657" y="561" width="337.66666666666674" height="51.666666666666629"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGG-ku-OHu">
                                         <rect key="frame" x="0.0" y="0.0" width="42.333333333333336" height="20.333333333333332"/>
@@ -69,7 +69,7 @@
                                 </subviews>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AvD-MX-cUp">
-                                <rect key="frame" x="67.666666666666686" y="290.66666666666669" width="240" height="240.00000000000006"/>
+                                <rect key="frame" x="67.666666666666686" y="291" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="0OT-mR-v11"/>
                                     <constraint firstAttribute="width" constant="240" id="9Px-Cm-HhQ"/>
@@ -82,7 +82,7 @@
                                 </constraints>
                             </pickerView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="agC-gB-zoi">
-                                <rect key="frame" x="65.666666666666686" y="538" width="244" height="30"/>
+                                <rect key="frame" x="65.666666666666686" y="684" width="244" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjM-r1-ve6">
                                         <rect key="frame" x="0.0" y="0.0" width="105" height="30"/>
@@ -104,20 +104,20 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="h2i-X6-YOS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2kM-Im-G1M"/>
-                            <constraint firstItem="agC-gB-zoi" firstAttribute="top" secondItem="AvD-MX-cUp" secondAttribute="bottom" constant="7.3300000000000001" id="6gL-uI-Aef"/>
-                            <constraint firstItem="agC-gB-zoi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7g0-l8-Dno"/>
-                            <constraint firstItem="UnQ-pY-D8K" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="bottom" multiplier="0.9" id="7mC-zs-dlz"/>
+                            <constraint firstItem="UnQ-pY-D8K" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="bottom" multiplier="0.9" constant="23.799999999999955" id="7mC-zs-dlz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="h2i-X6-YOS" secondAttribute="bottom" constant="-142" id="8kJ-oi-jHe"/>
                             <constraint firstItem="h2i-X6-YOS" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.9" id="Fv8-5S-vAJ"/>
                             <constraint firstItem="MEt-kY-ike" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.9" id="Ipw-bJ-CaB"/>
                             <constraint firstItem="P4U-Oj-TTM" firstAttribute="top" secondItem="MEt-kY-ike" secondAttribute="bottom" constant="34" id="LZo-6z-0Om"/>
+                            <constraint firstItem="agC-gB-zoi" firstAttribute="top" secondItem="P4U-Oj-TTM" secondAttribute="bottom" constant="7.3300000000000001" id="Rdz-WC-ixV"/>
                             <constraint firstItem="P4U-Oj-TTM" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.9" id="V0s-uQ-7p6"/>
                             <constraint firstItem="P4U-Oj-TTM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b93-jB-cds"/>
                             <constraint firstItem="AvD-MX-cUp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eTv-35-CPu"/>
                             <constraint firstItem="MEt-kY-ike" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f8z-nF-fft"/>
-                            <constraint firstItem="UnQ-pY-D8K" firstAttribute="top" secondItem="P4U-Oj-TTM" secondAttribute="bottom" constant="23.5" id="fKo-tr-Ze4"/>
+                            <constraint firstItem="UnQ-pY-D8K" firstAttribute="top" secondItem="P4U-Oj-TTM" secondAttribute="bottom" constant="47.333333333333371" id="fKo-tr-Ze4"/>
                             <constraint firstItem="UnQ-pY-D8K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hq8-Ob-Dql"/>
                             <constraint firstItem="MEt-kY-ike" firstAttribute="top" secondItem="AvD-MX-cUp" secondAttribute="bottom" constant="30" id="u9h-jX-u83"/>
+                            <constraint firstItem="agC-gB-zoi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uio-g2-CmH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
