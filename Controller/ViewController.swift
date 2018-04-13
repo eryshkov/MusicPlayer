@@ -190,6 +190,32 @@ class ViewController: UIViewController {
     
     //MARK: - Actions
     
+    @IBAction func eraseButtonTapped(_ sender: UIButton) {
+        guard let whereSaved = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("Audio") else {return}
+        guard let deleted = try? FileManager.default.removeItem(at: whereSaved) else {
+            return
+        }
+        let alert = UIAlertController(title: "Info", message: "Files deleted successfully ", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
+    @IBAction func saveButtonTapped(_ sender: UIButton) {
+        guard let whereSave = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("Audio") else {return}
+        try? FileManager.default.createDirectory(at: whereSave, withIntermediateDirectories: false)
+        
+        guard let fromSave = Bundle.main.urls(forResourcesWithExtension: "mp3", subdirectory: "") else {return}
+        for item in fromSave {
+            if let data = try? Data(contentsOf: item){
+                try? data.write(to: whereSave.appendingPathComponent(item.lastPathComponent))
+            }
+            
+        }
+        let alert = UIAlertController(title: "Info", message: "Files saved successfully ", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
     
     @IBAction func progressSliderInUse(_ sender: UISlider) {
         self.progressSliderUnused = false

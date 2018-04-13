@@ -81,10 +81,31 @@
                                     <constraint firstAttribute="height" constant="142" id="0Wf-fv-qSk"/>
                                 </constraints>
                             </pickerView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="agC-gB-zoi">
+                                <rect key="frame" x="65.666666666666686" y="538" width="244" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjM-r1-ve6">
+                                        <rect key="frame" x="0.0" y="0.0" width="105" height="30"/>
+                                        <state key="normal" title="Save on Device"/>
+                                        <connections>
+                                            <action selector="saveButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T24-cS-Rvb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9tV-dP-BDo">
+                                        <rect key="frame" x="119" y="0.0" width="125" height="30"/>
+                                        <state key="normal" title="Erase from Device"/>
+                                        <connections>
+                                            <action selector="eraseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UE7-ZD-Uc3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="h2i-X6-YOS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2kM-Im-G1M"/>
+                            <constraint firstItem="agC-gB-zoi" firstAttribute="top" secondItem="AvD-MX-cUp" secondAttribute="bottom" constant="7.3300000000000001" id="6gL-uI-Aef"/>
+                            <constraint firstItem="agC-gB-zoi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7g0-l8-Dno"/>
                             <constraint firstItem="UnQ-pY-D8K" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="bottom" multiplier="0.9" id="7mC-zs-dlz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="h2i-X6-YOS" secondAttribute="bottom" constant="-142" id="8kJ-oi-jHe"/>
                             <constraint firstItem="h2i-X6-YOS" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.9" id="Fv8-5S-vAJ"/>
